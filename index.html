@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bola</title>
+</head>
+
+<body id="body1" style="background-color: red;">
+	<div style="width: 100%; padding: 10px;">
+
+		<div style="border-radius: 17px;color: white;background-color: white; width: 121px;height: 121px;padding: 6px;">
+			
+
+			<map name="map">
+				<area shape="circle" coords="60,13,12" style="cursor: pointer;" onclick="moverarriba()" />
+				<area shape="circle" coords="104,58,15" style="cursor: pointer;" onclick="moverderecha()" />
+				<area shape="circle" coords="59,103,13" style="cursor: pointer;" onclick="moverabajo()" />
+				<area shape="circle" coords="19,57,17" style="cursor: pointer;" onclick="moverizquierda()" />
+			</map>
+			<!-- 626 626 -->
+			<img src="img/cruzeta.png" style="top: 10px;width: 120px;" border="0" usemap="#map" />
+			<br>
+			<br>
+			<button onclick="daltonicmode()"><p id="dlmode">DALTONIC MODE: OFF</p></button>
+
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<img src="img/bola.png" id="boleta" style="width:100px;">
+
+	</div>
+
+	<script>
+		var position = 400;
+
+		function moverderecha() {
+			document.getElementById('boleta').style.marginLeft = position + 'px'
+			position = position + 20;
+
+
+
+		}
+
+		function moverizquierda() {
+			document.getElementById('boleta').style.marginLeft = position + 'px'
+			position = position - 20;
+
+
+
+		}
+
+		function moverabajo() {
+			document.getElementById('boleta').style.marginTop = position + 'px'
+			position = position + 20;
+
+
+
+		}
+
+
+		function moverarriba() {
+			document.getElementById('boleta').style.marginTop = position + 'px'
+			position = position - 20;
+
+
+
+		}
+
+		function daltonicmode(){
+			document.getElementById('boleta').src='img/bolawb.png';
+			document.getElementById('dlmode').innerHTML='DALTONIC MODE: ON';
+			document.getElementById('body1').style.backgroundColor='white';
+
+
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>
